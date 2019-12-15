@@ -11,6 +11,7 @@ describe 'is_solution' do
 
     expect(board.is_solution).to eq(false)
   end
+
   it 'returns false when queens can kill each other (4x4)' do
     board = Board.new(4)
     board.place_queen([2,0])
@@ -20,6 +21,7 @@ describe 'is_solution' do
 
     expect(board.is_solution).to eq(false)
   end
+
   it 'returns true when queens cannot kill each other' do
     board = Board.new(4)
     board.place_queen([2,0])
